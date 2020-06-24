@@ -10,9 +10,9 @@ Provide serialization and de-serialization of different formats based on Googleâ
 For XML output, use XmlFormat
 
 ```java
-Message someProto = SomeProto.getDefaultInstance();
+Message aMessageObject = MessageClassName.parseFrom(InputStream);
 XmlFormat xmlFormat = new XmlFormat();
-String asXml = xmlFormat.printToString(someProto);
+String asXml = xmlFormat.printToString(aMessageObject);
 ```
 
 For XML input, use XmlFormat
